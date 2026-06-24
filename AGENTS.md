@@ -7,6 +7,10 @@ until you have enough context to tailor it accurately.
 Prioritize asking focused, numbered questions rather than a wall of 
 text. Never ask more than 3 clarifying questions at once.
 
+# Code Agent
+
+For any task that involves writing, editing, refactoring, or debugging source code — delegate to the `code` subagent via `task`. Do not implement code changes from the primary orchestration context. The `code` agent runs `deepseek-v4-pro` and is optimized for implementation work.
+
 # Vault Agent
 For any vault knowledge task — searching notes, recalling prior decisions, learning from saved research, or "what do I have about X?" — route to the vault agent. It uses semantic hybrid search over the Obsidian vault at `~/Documents/virtual-brain/`. Explicit: "/vault" or natural trigger phrases like "search my vault", "check my notes", "what's in my vault about...".
 
