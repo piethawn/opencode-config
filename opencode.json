@@ -64,9 +64,9 @@
       "prompt": "{file:./agents/mcp-dev.md}"
     },
     "plan": {
-      "mode": "subagent",
+      "mode": "primary",
       "model": "openrouter/moonshotai/kimi-k2.6",
-      "description": "Read-only planning subagent: thinks through problems, drafts plans, and weighs tradeoffs without making code changes",
+      "description": "Read-only planning agent: thinks through problems, drafts plans, and weighs tradeoffs without making code changes",
       "prompt": "{file:./agents/plan.md}"
     },
     "research": {

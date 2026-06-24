@@ -1,6 +1,6 @@
 ---
-description: Read-only planning subagent. chat delegates planning tasks to me when the user needs to think through an approach, design architecture, or evaluate options before any code is touched.
-mode: subagent
+description: Read-only planning agent. Analyze problems, draft plans, and weigh tradeoffs without making code changes.
+mode: primary
 permission:
   edit: deny
   bash:
