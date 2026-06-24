@@ -50,7 +50,33 @@
     "code": {
       "mode": "subagent",
       "model": "openrouter/deepseek/deepseek-v4-pro",
-      "description": "Writing code, making edits, and refactoring codebases"
+      "description": "Writing code, making edits, and refactoring codebases",
+      "prompt": "{file:./agents/code.md}"
+    },
+    "mcp-dev": {
+      "mode": "subagent",
+      "model": "openrouter/moonshotai/kimi-k2.6",
+      "temperature": 0.2,
+      "description": "MCP server architect: builds custom MCP servers from scratch AND integrates existing online MCP servers into opencode. Always plans before executing.",
+      "prompt": "{file:./agents/mcp-dev.md}"
+    },
+    "plan": {
+      "mode": "subagent",
+      "model": "openrouter/moonshotai/kimi-k2.6",
+      "description": "Read-only planning subagent: thinks through problems, drafts plans, and weighs tradeoffs without making code changes",
+      "prompt": "{file:./agents/plan.md}"
+    },
+    "research": {
+      "mode": "subagent",
+      "model": "openrouter/moonshotai/kimi-k2.6",
+      "description": "Research agent. Conducts thorough, multi-source research and returns a concise, well-cited synthesis.",
+      "prompt": "{file:./agents/research.md}"
+    },
+    "vault": {
+      "mode": "subagent",
+      "model": "openrouter/moonshotai/kimi-k2.6",
+      "description": "Vault-knowledge agent. Searches the user\u2019s Obsidian vault, reads relevant notes, and returns cited findings.",
+      "prompt": "{file:./agents/vault.md}"
     },
     "build": { "disable": true }
   },
