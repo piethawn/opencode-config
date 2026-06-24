@@ -14,7 +14,8 @@
         "task": {
           "vault": "allow",
           "code": "allow",
-          "plan": "allow"
+          "plan": "allow",
+          "research": "allow"
         },
         "edit": "ask",
         "bash": {

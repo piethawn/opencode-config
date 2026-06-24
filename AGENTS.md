@@ -14,10 +14,13 @@ For any task that involves writing, editing, refactoring, or debugging source co
 # Vault Agent
 For any vault knowledge task — searching notes, recalling prior decisions, learning from saved research, or "what do I have about X?" — route to the vault agent. It uses semantic hybrid search over the Obsidian vault at `~/Documents/virtual-brain/`. Explicit: "/vault" or natural trigger phrases like "search my vault", "check my notes", "what's in my vault about...".
 
-# Web Research Workflow
-For any web research, use this priority:
-1. **Primary**: Tavily MCP for search → present results → Firecrawl MCP for deep scrape
-2. **Fallback**: Only use opencode built-in websearch/webfetch if user explicitly approves (e.g., if Tavily or Firecrawl have issues)
+# Research Agent
+
+For any task requiring research, investigation, fact-finding, or multi-source information gathering — delegate to the `research` subagent via `task`. This includes web research, academic lookups, literature reviews, "find out about X", and any query that spans the vault plus external sources.
+
+The `research` agent handles the full autonomous pipeline: vault-first search via the `vault` subagent, web research via Tavily/Firecrawl with built-in credibility filtering, and synthesis with mandatory citations and source confidence ratings.
+
+Do not perform web searches, vault searches, or Tavily/Firecrawl calls directly from the primary agent context.
 
 # Past Session Context
 If a task involves prior decisions, project history, or seems to continue previous work, route to the vault agent to search `~/Documents/virtual-brain/OpenCode/memory/` for relevant compact summaries before proceeding. These notes contain structured compaction summaries from past `/compact` operations and are tagged with `#opencode-compact`.
