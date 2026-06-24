@@ -10,6 +10,9 @@
       "model": "openrouter/moonshotai/kimi-k2.6",
       "description": "Daily driver: general conversation, quick questions, and orchestration",
       "permission": {
+        "task": {
+          "vault": "allow"
+        },
         "edit": "ask",
         "bash": {
           "ls *": "allow",
@@ -37,23 +40,6 @@
           "*": "ask",
           "rm *": "deny",
           "rm -rf*": "deny"
-        }
-      }
-    },
-    "study": {
-      "mode": "primary",
-      "model": "openrouter/moonshotai/kimi-k2.6",
-      "temperature": 0.2,
-      "prompt": "{file:./prompts/study.md}",
-      "description": "Research and note-taking: summarize transcripts and generate notes into my vault. Can write notes, cannot delete them.",
-      "permission": {
-        "edit": "ask",
-        "external_directory": "allow",
-        "bash": {
-          "*": "ask",
-          "rm *": "deny",
-          "rm -rf*": "deny",
-          "mv *": "ask"
         }
       }
     },
