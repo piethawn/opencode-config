@@ -1,55 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "openrouter/moonshotai/kimi-k2.6",
-  "default_agent": "chat",
   "skills": {
     "paths": ["~/.config/opencode/skills"]
   },
   "agent": {
-    "chat": {
-      "mode": "primary",
-      "model": "openrouter/moonshotai/kimi-k2.6",
-      "description": "Daily driver: general conversation, quick questions, and orchestration",
-      "permission": {
-        "task": {
-          "vault": "allow",
-          "code": "allow",
-          "plan": "allow",
-          "research": "allow"
-        },
-        "edit": {
-          "*": "ask",
-          "~/.config/opencode/**": "allow"
-        },
-        "bash": {
-          "ls *": "allow",
-          "cat *": "allow",
-          "find *": "allow",
-          "grep *": "allow",
-          "head *": "allow",
-          "tail *": "allow",
-          "pwd": "allow",
-          "echo *": "allow",
-          "which *": "allow",
-          "file *": "allow",
-          "stat *": "allow",
-          "du *": "allow",
-          "df *": "allow",
-          "ps *": "allow",
-          "env": "allow",
-          "date": "allow",
-          "whoami": "allow",
-          "uname *": "allow",
-          "git status*": "allow",
-          "git log*": "allow",
-          "git diff*": "allow",
-          "git branch*": "allow",
-          "*": "ask",
-          "rm *": "deny",
-          "rm -rf*": "deny"
-        }
-      }
-    },
     "code": {
       "mode": "subagent",
       "model": "openrouter/deepseek/deepseek-v4-pro",
@@ -63,12 +18,6 @@
       "description": "MCP server architect: builds custom MCP servers from scratch AND integrates existing online MCP servers into opencode. Always plans before executing.",
       "prompt": "{file:./agents/mcp-dev.md}"
     },
-    "plan": {
-      "mode": "primary",
-      "model": "openrouter/moonshotai/kimi-k2.6",
-      "description": "Read-only planning agent: thinks through problems, drafts plans, and weighs tradeoffs without making code changes",
-      "prompt": "{file:./agents/plan.md}"
-    },
     "research": {
       "mode": "subagent",
       "model": "openrouter/moonshotai/kimi-k2.6",
@@ -80,8 +29,7 @@
       "model": "openrouter/moonshotai/kimi-k2.6",
       "description": "Vault-knowledge agent. Searches the user\u2019s Obsidian vault, reads relevant notes, and returns cited findings.",
       "prompt": "{file:./agents/vault.md}"
-    },
-    "build": { "disable": true }
+    }
   },
   "permission": {
     "external_directory": {
