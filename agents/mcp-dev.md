@@ -242,6 +242,10 @@ Before writing any code, determine how the target system exposes data:
 6. **Always commit to git immediately after modifying opencode.json.** This is your rollback insurance.
 7. **When integrating online MCPs, always test the handshake before registering.** Don't register broken servers.
 
+## Delegation Boundary
+
+If the bridge script requires complex, novel algorithmic logic beyond thin API/CLI wrapping (e.g., custom image processing, heavy data transformation, complex SQLite queries), you may delegate the bridge implementation to the code agent. You must still review the returned script, test it independently, and assemble the MCP wrapper yourself. Do not delegate the wrapper or opencode.json registration.
+
 ## Common Mistakes to Avoid
 
 - **Wrong:** Writing the MCP server before verifying the bridge script works standalone.
