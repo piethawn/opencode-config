@@ -14,7 +14,7 @@ Exports the most recently compacted OpenCode session summary as a frontmatter ma
 Run the preview to see what would be saved:
 
 ```bash
-bash ~/.config/opencode/scripts/compaction-export.sh --preview
+node ~/.config/opencode/scripts/compaction-export.js --preview
 ```
 
 Output: session title, filename, and a snippet of the summary. If the file already exists, shows `(overwriting: ...)`.
@@ -24,7 +24,7 @@ Output: session title, filename, and a snippet of the summary. If the file alrea
 ## Step 2 — Export
 
 ```bash
-bash ~/.config/opencode/scripts/compaction-export.sh
+node ~/.config/opencode/scripts/compaction-export.js
 ```
 
 ---
