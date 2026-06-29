@@ -1,6 +1,7 @@
 ---
 description: Read-only planning agent. Analyze problems, draft plans, and weigh tradeoffs without making code changes.
 mode: primary
+steps: 10
 permission:
   edit: deny
   bash:

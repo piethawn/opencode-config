@@ -1,6 +1,7 @@
 ---
 description: "Writing code, making edits, and refactoring codebases."
 mode: subagent
+steps: 10
 permission:
   edit: ask
   bash:

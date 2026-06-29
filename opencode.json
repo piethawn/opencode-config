@@ -11,6 +11,12 @@
       "description": "Writing code, making edits, and refactoring codebases",
       "prompt": "{file:./agents/code.md}"
     },
+    "plan": {
+      "mode": "primary",
+      "model": "openrouter/moonshotai/kimi-k2.6",
+      "description": "Read-only planning agent. Analyze problems, draft plans, and weigh tradeoffs without making code changes.",
+      "prompt": "{file:./agents/plan.md}"
+    },
     "mcp-dev": {
       "mode": "subagent",
       "model": "openrouter/moonshotai/kimi-k2.6",
